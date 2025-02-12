@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Básico de Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #004d40;
+        }
+
+        h2 {
+            color: #00796b;
+        }
+
+        pre {
+            background-color: #e0f7fa;
+            padding: 10px;
+            color: #004d40;
+        }
+
+        .box {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tutorial Básico de Python</h1>
+    <p>Python es un lenguaje de programación fácil de aprender y muy poderoso. Es ideal para principiantes, y también es
+        usado en una gran variedad de proyectos profesionales.</p>
+
+    <!-- Sección: Introducción a Python -->
+    <div class="box">
+        <h2>1. Introducción: Ejecutar Python</h2>
+
+        <h3>1.1 Instalando Python en VS Code</h3>
+        <p>Si aún no tienes Python instalado, asegúrate de instalarlo desde <a href="https://www.python.org/downloads/"
+                target="_blank">python.org</a> y selecciona la opción "Agregar Python a la variable PATH" durante la
+            instalación.</p>
+
+        <h3>1.2 Usando la terminal integrada de VS Code</h3>
+        <p>Para ejecutar Python desde la terminal de VS Code:</p>
+        <ol>
+            <li>Abre VS Code y crea un nuevo archivo con la extensión <code>.py</code>.</li>
+            <li>Escribe tu código Python en el archivo.</li>
+            <li>Abre la terminal integrada en VS Code. Puedes hacerlo con el atajo de teclado <strong>Ctrl + `</strong>
+                o desde el menú superior seleccionando <strong>Terminal &gt; Nueva Terminal</strong>.</li>
+            <li>En la terminal integrada, navega hasta el directorio donde se encuentra tu archivo usando el comando
+                <code>cd</code> (si es necesario).
+            </li>
+            <li>Para ejecutar tu archivo Python, escribe el siguiente comando en la terminal integrada:</li>
+        </ol>
+        <pre><code>python nombre_del_archivo.py</code></pre>
+        <p>Por ejemplo, si tu archivo se llama <code>hola_mundo.py</code>, ejecuta:</p>
+        <pre><code>python hola_mundo.py</code></pre>
+    </div>
+
+    <!-- Sección: Variables -->
+    <div class="box">
+        <h2>2. Variables</h2>
+        <p>Las variables en Python no necesitan ser declaradas explícitamente. Puedes asignarles cualquier tipo de dato.
+        </p>
+        <pre><code># Cadenas
+nombre = "Juan"
+# Números enteros (int)
+edad = 25
+# Booleanos
+es_mayor = True
+# Decimales (float)
+PI = 3.14159</code></pre>
+
+        <p>Para obtener datos de entrada del usuario, puedes usar la función <code>input()</code>. El valor devuelto por
+            <code>input()</code> es siempre una cadena (string), por lo que si esperas un número, tendrás que
+            convertirlo usando <code>int()</code> o <code>float()</code>.
+        </p>
+        <pre><code># Obtener un valor del usuario
+nombre = input("¿Cómo te llamas? ")
+print("Hola ", nombre)
+
+# Convertir la entrada a un número
+edad = int(input("¿Cuántos años tienes? "))
+print("Tienes  edad, "años.")
+</code></pre>
+    </div>
+
+    <!-- Sección: Operaciones Matemáticas -->
+    <div class="box">
+        <h2>3. Operaciones Matemáticas</h2>
+        <p>Python permite realizar operaciones básicas como suma, resta, multiplicación y división.</p>
+        <pre><code># Operaciones básicas
+suma = 5 + 3
+resta = 5 - 3
+multiplicacion = 5 * 3
+division = 6 / 3</code></pre>
+    </div>
+
+    <!-- Sección: Manipulación de Cadenas -->
+    <div class="box">
+        <h2>4. Manipulación de Cadenas</h2>
+        <p>Las cadenas (strings) pueden ser manipuladas de varias maneras en Python.</p>
+        <pre><code>saludo = "Hola " + "mundo"
+longitud = len(saludo)
+reemplazo = saludo.replace("mundo", "Python")
+mayusculas = saludo.upper()
+minusculas = saludo.lower()</code></pre>
+    </div>
+
+    <!-- Sección: Funciones -->
+    <!-- Sección: Funciones -->
+    <div class="box">
+        <h2>Funciones</h2>
+        <p>Las funciones en Python son bloques de código reutilizables que se ejecutan cuando son llamados. Se pueden
+            definir funciones con o sin parámetros y también pueden devolver valores.</p>
+
+        <h3>Definir una función básica:</h3>
+        <pre><code>def saludar():
+    print("Hola, bienvenido!")
+
+# Llamar a la función
+saludar()  # Salida: Hola, bienvenido!</code></pre>
+
+        <h3>Funciones con parámetros y retorno:</h3>
+        <p>Puedes definir funciones con varios parámetros y devolver un valor procesado.</p>
+        <pre><code>def calcular_area(base, altura):
+    area = base * altura / 2
+    return area
+
+# Llamar a la función con dos argumentos
+area_triangulo = calcular_area(10, 5)
+
+# Mostrar el área calculada
+print(area_triangulo)  # Salida: 25.0</code></pre>
+    </div>
+
+
+    <!-- Sección: Condicionales -->
+    <div class="box">
+        <h2>6. Condicionales</h2>
+        <p>Los condicionales en Python se implementan con las palabras clave <code>if</code>, <code>elif</code>, y
+            <code>else</code>.
+        </p>
+        <pre><code>edad = 18
+
+if edad >= 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")</code></pre>
+    </div>
+
+        <!-- Sección: Listas -->
+        <div class="box">
+            <h2>Listas</h2>
+            <p>Las listas son colecciones de elementos ordenados. Puedes agregar, eliminar, modificar y acceder a los
+                elementos en una lista.</p>
+    
+            <h3>Ejemplos básicos:</h3>
+            <pre><code>numeros = [1, 2, 3, 4, 5]
+        
+    # Agregar un elemento al final de la lista
+    numeros.append(6)  
+    
+    # Eliminar un elemento específico de la lista
+    numeros.remove(2)  
+    
+    # Obtener la longitud de la lista
+    longitud = len(numeros)  
+    
+    # Mostrar la lista actualizada
+    print(numeros)  # Salida: [1, 3, 4, 5, 6]
+    
+    # Acceder al primer elemento
+    print(numeros[0])  # Salida: 10
+    
+    # Acceder al tercer elemento
+    print(numeros[2])  # Salida: 30
+    
+    </code></pre>
+    
+        </div>
+
+    <!-- Sección: Bucles -->
+    <div class="box">
+        <h2>7. Bucles</h2>
+        <p>El bucle <code>for</code> en Python se usa para iterar sobre una secuencia (como una lista o un rango de
+            números).</p>
+        <pre><code># Bucle for
+for i in range(5):
+    print("Número:", i)
+
+# Bucle while
+contador = 0
+while contador < 5:
+    print("Contador:", contador)
+    contador += 1</code></pre>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
