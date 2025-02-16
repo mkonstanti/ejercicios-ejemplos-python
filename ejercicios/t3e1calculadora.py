@@ -9,6 +9,7 @@ multiplicacion = numero1 * numero2
 division = numero1 / numero2
 
 #Mostrar los resultados
+print("\nResultados de la calculadora:")
 print("EL resultado de la suma de los numeros es: ", suma)
 print("EL resultado de la resta de los numeros es: ", resta)
 print("El resultado de la multiplicación de los dos numeros es: ", multiplicacion)
